@@ -1,0 +1,57 @@
+.wrapper
+  .background
+    .header
+      = render "header"
+    .text
+      世界を、笑顔でつなげよう
+  .main
+    .main-index
+      .word_smile
+        世界の笑顔
+      .contents
+        = render @posts
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag "smile2.jpg", size: "300x450",class: "image-coner"
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag "smile3.jpg", size: "300x450",class: "image-coner"
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag "smile4.jpg", size: "300x450",class: "image-coner"
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag "smile5.jpg", size: "300x450",class: "image-coner"
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag "smile6.jpg", size: "300x450",class: "image-coner"
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag "smile7.jpg", size: "300x450",class: "image-coner"
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag "smile8.jpg", size: "300x450",class: "image-coner"
+        -# %li.content
+        -#   .content__image
+        -#     = image_tag @post.image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-# = form_with model: @post, local: true do |f|
+-#   = f.text_field :content

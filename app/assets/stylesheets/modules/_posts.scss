@@ -1,0 +1,100 @@
+.wrapper {
+  // height: 4000px;
+
+  .header {
+    width: 100vw;
+    position: fixed;
+    height: 80px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    .header-icon {
+      width: 100px;
+      height: 80px;
+    }
+    .header-box {
+      height: 80px;
+      width: 580px;
+      // background-color: blue;
+      display: flex;
+      .posts {
+        display: flex;
+        margin-top: 20px;
+        .post {
+          line-height: 40px;
+          font-size: 18px;
+          text-align: center;
+          height: 40px;
+          width: 120px;
+          // background-color: pink;
+          // background-color: rgba(100, 100, 100, 0.5);
+          margin-left: 10px;
+        }
+        .post-create {
+          text-decoration: none;
+          color: black;
+        }
+        .post:hover {
+          border-radius: 3px;
+          background: rgba(0, 0, 0, 0.2);
+          // background-color: rgba(100, 100, 100, 0.5);
+          // border-radius: 10px;
+        }
+      }
+      .profile {
+        height: 80px;
+        width: 150px;
+        // background-color: purple;
+        margin-left: 10px;
+      }
+    }
+  }
+  .text {
+    position: absolute;
+    top: 230px;
+    right: 480px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+}
+.main {
+  // height: 1000px;
+  // background-color: red;
+  margin-top: 50px;
+  .main-index {
+    // height: 900px;
+    // background-color: pink;
+    padding: 0 80px;
+    .word_smile {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
+      li:nth-child(3n + 2):last-child {
+        // list-style: none;
+        margin-bottom: 10px;
+      }
+      .content {
+        width: 300px;
+        height: 520px;
+        // background-color: pink;
+        padding-right: 8px;
+        padding-left: 8px;
+        margin-bottom: 15px;
+        &__image {
+          border-radius: 3px;
+          height: 450px;
+          // background-color: sandybrown;
+          .image-coner {
+            border-radius: 30px;
+          }
+        }
+      }
+    }
+  }
+}

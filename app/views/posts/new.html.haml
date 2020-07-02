@@ -1,0 +1,29 @@
+.wrapper
+  .bachground-new
+  
+    .header
+      = render "header"
+    
+    .main-box
+      .form-box
+        = form_with model: @post, class: "form_with", local: true do |f|
+          .box
+            .form-title
+              title
+            .form-top
+              = f.text_field :title, class: "form", placeholder: "Type a title"
+            .form-nickname
+              nickname
+            .form-top
+              = f.text_field :nickname, class: "form"
+            .form-content
+              content
+            .form3
+              = f.text_area :content, class: "form-last"
+            .submit
+              = f.submit
+          .form4
+            = f.label :image, class: "image-box" do
+              .image-box
+              = f.file_field :image, class: "hidden"
+            
