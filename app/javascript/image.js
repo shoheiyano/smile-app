@@ -28,6 +28,7 @@ window.addEventListener("scroll", function () {
     headerElement.classList.add("hidden"); // そうでなければhiddensセレクタを追加する
   }
 });
+
 $(function () {
   //画像ファイルプレビュー表示のイベント追加 fileを選択時に発火するイベントを登録
   $("form").on("change", 'input[type="file"]', function (e) {
