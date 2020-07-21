@@ -1,3 +1,4 @@
 %li.content
   .content__image
-    = image_tag post.image.url, size: "300x450",class: "image-coner"
+    = link_to post_path(post) do
+      = image_tag post.image.url, size: "300x450",class: "image-coner"

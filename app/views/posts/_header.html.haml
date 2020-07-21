@@ -1,12 +1,34 @@
 .header-icon
-  smile
+  = link_to root_path do
+    SmileApp
 .header-box
   .posts
-    .post
-      ログイン
-    .post
-      新規登録
-    = link_to new_post_path,class: "post-create" do
+    - if user_signed_in?
       .post
-        投稿
-  .profile
+        初めての方へ
+      = link_to "#" do
+        .post
+          投稿一覧
+        .hover_block
+          .post.fas.fa-angle-down
+            = current_user.name
+          .user__info
+            .fas.fa-user
+              = link_to "マイページ", "/users/#{current_user.id}"
+            .fas.fa-edit
+              = link_to "ユーザー編集", edit_user_path(current_user.id)
+            .fas.fa-sign-out-alt
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+      = link_to new_post_path,class: "post-create" do
+        .post
+          投稿
+    - else
+      .post
+        ログイン
+      = link_to edit_user_path(current_user) do
+        .post
+          新規登録
+      = link_to new_post_path,class: "post-create" do
+        .post
+          投稿
+  .profil
