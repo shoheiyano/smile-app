@@ -57,3 +57,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
 gem 'devise'
+gem "font-awesome-sass"

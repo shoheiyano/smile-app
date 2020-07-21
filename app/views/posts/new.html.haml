@@ -25,5 +25,7 @@
           .form4
             = f.label :image, class: "image-box" do
               .image-box
-              = f.file_field :image, class: "hidden"
+                = icon('fas', 'camera',class: "camera")
+                .preview
+                  = f.file_field :image, class: "hidden"
             

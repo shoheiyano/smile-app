@@ -1,34 +1,53 @@
 .wrapper {
   // height: 4000px;
-
   .header {
     width: 100vw;
+    top: 0;
     position: fixed;
-    height: 80px;
+    height: 50px;
+    // height: 80px;
     padding: 0 80px;
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
+    transition: all 0.5s ease;
     .header-icon {
-      width: 100px;
-      height: 80px;
+      // height: 40px;
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: "Noto Sans JP", sans-serif;
     }
     .header-box {
-      height: 80px;
+      // height: 80px;
       width: 580px;
       // background-color: blue;
       display: flex;
       .posts {
+        // padding-bottom: 10px;
         display: flex;
-        margin-top: 20px;
+        margin-top: 10px;
         .post {
-          line-height: 40px;
           font-size: 18px;
-          text-align: center;
-          height: 40px;
-          width: 120px;
-          // background-color: pink;
-          // background-color: rgba(100, 100, 100, 0.5);
-          margin-left: 10px;
+          margin-left: 35px;
+        }
+        .hover_block {
+          position: relative;
+          text-decoration: none;
+          &:hover .user__info {
+            display: block;
+          }
+          .user__info {
+            background: white;
+            display: none;
+            top: 40px;
+            position: absolute;
+            width: 110px;
+            li {
+              list-style: none;
+            }
+          }
         }
         .post-create {
           text-decoration: none;
@@ -36,7 +55,7 @@
         }
         .post:hover {
           border-radius: 3px;
-          background: rgba(0, 0, 0, 0.2);
+          // background: rgba(0, 0, 0, 0.2);
           // background-color: rgba(100, 100, 100, 0.5);
           // border-radius: 10px;
         }
@@ -49,10 +68,16 @@
       }
     }
   }
+  .hidden {
+    background: none;
+    transition: all 0.5s ease;
+  }
   .text {
-    position: absolute;
-    top: 230px;
-    right: 480px;
+    text-align: center;
+    padding-top: 220px;
+    // position: absolute;
+    // top: 230px;
+    // right: 480px;
     font-size: 50px;
     font-weight: bold;
   }
@@ -75,10 +100,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
       list-style: none;
-      li:nth-child(3n + 2):last-child {
-        // list-style: none;
-        margin-bottom: 10px;
-      }
       .content {
         width: 300px;
         height: 520px;
@@ -97,4 +118,19 @@
       }
     }
   }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.fa-user {
+  font-size: 14px;
+}
+
+.fa-edit {
+  font-size: 14px;
+}
+.fa-sign-out-alt {
+  font-size: 14px;
 }
