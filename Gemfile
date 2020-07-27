@@ -58,3 +58,7 @@ gem 'mini_magick'
 gem 'jquery-rails'
 gem 'devise'
 gem "font-awesome-sass"
+
+group :production do
+  gem 'rails_12factor'
+end
